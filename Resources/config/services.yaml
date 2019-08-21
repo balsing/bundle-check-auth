@@ -1,28 +1,26 @@
 services:
 
-
-
-     youtool_auth.crypt.public_key:
+    youtool_auth.crypt.public_key:
         class: YouTool\AuthBundle\CryptKey\CryptKey
         arguments:
             $keyPath: '%youtool_auth.public_key_path%'
 
 
 
-     youtool_auth.token.token_factory:
+    youtool_auth.token.token_factory:
         class:  YouTool\AuthBundle\Jwt\TokenFactory\TokenFactory
 
-     youtool_auth.token.parser:
+    youtool_auth.token.parser:
         class: YouTool\AuthBundle\Jwt\Parser\BearerParser
         arguments:
             - '@youtool_auth.token.token_factory'
 
 
 
-     youtool_auth.service.transport:
+    youtool_auth.service.transport:
         class: GuzzleHttp\Client
 
-     youtool_auth.service.config:
+    youtool_auth.service.config:
         class: YouTool\AuthBundle\Service\ArrayConfig
         arguments:
             $baseUri: '%youtool_auth.base_url%'

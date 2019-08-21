@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt\Validator;
+namespace Youtool\AuthBundle\Tests\Jwt\Validator;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Jwt\Validator\RequiredScopesValidator;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Jwt\Validator\RequiredScopesValidator;
 
 /**
  * Набор тестов для объекта, который проверяет, что jwt еще не истек.

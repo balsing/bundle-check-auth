@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Service;
+namespace Youtool\AuthBundle\Service;
 
-use YouTool\AuthBundle\Jwt\TokenFactory\TokenFactoryInterface;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Exception\TransportException;
+use Youtool\AuthBundle\Jwt\TokenFactory\TokenFactoryInterface;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Exception\TransportException;
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 use Exception;

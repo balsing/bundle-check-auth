@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt;
+namespace Youtool\AuthBundle\Tests\Jwt;
 
-use YouTool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Tests\JwtCase;
 
 /**
  * Набор тестов для токена.

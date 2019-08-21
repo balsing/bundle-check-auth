@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\CryptKey;
+namespace Youtool\AuthBundle\CryptKey;
 
 /**
  * Интерфейс для объекта, который хранит информацию о ключе шифрования.

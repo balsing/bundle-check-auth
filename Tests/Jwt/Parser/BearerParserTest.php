@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt;
+namespace Youtool\AuthBundle\Tests\Jwt;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Jwt\Parser\BearerParser;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Jwt\Parser\BearerParser;
 use Symfony\Component\HttpFoundation\Request;
 use UnexpectedValueException;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\Validator;
+namespace Youtool\AuthBundle\Jwt\Validator;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Service\AuthServiceInterface;
-use YouTool\AuthBundle\Exception\TransportException;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Service\AuthServiceInterface;
+use Youtool\AuthBundle\Exception\TransportException;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
 
 /**
  * Объект, который проверяет jwt с помощью запроса к сервису авторизации.

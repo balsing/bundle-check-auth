@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Service;
+namespace Youtool\AuthBundle\Service;
 
-use YouTool\AuthBundle\Jwt\Token\Token;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Exception\TransportException;
+use Youtool\AuthBundle\Jwt\Token\Token;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Exception\TransportException;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Key;
 use Lcobucci\JWT\Signer\Rsa\Sha256;

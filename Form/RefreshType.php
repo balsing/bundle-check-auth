@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Form;
+namespace Youtool\AuthBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

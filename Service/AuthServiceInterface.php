@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Service;
+namespace Youtool\AuthBundle\Service;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Exception\TransportException;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Exception\TransportException;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
 
 /**
  * Интерфейс для объекта, который обращется к сервису авторизации youtool.

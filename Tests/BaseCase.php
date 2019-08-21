@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests;
+namespace Youtool\AuthBundle\Tests;
 
 use PHPUnit\Framework\TestCase;
 

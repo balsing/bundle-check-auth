@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt\Validator;
+namespace Youtool\AuthBundle\Tests\Jwt\Validator;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\CryptKey\CryptKey;
-use YouTool\AuthBundle\Jwt\Validator\VerifyValidator;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\CryptKey\CryptKey;
+use Youtool\AuthBundle\Jwt\Validator\VerifyValidator;
 
 /**
  * Набор тестов для объекта, который проверяет, что jwt еще не истек.

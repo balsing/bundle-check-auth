@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\CryptKey;
+namespace Youtool\AuthBundle\Tests\CryptKey;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Security\JwtAuthenticator;
-use YouTool\AuthBundle\Jwt\Handler\HandlerInterface;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
-use YouTool\AuthBundle\Security\JwtUserProviderInterface;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Security\JwtAuthenticator;
+use Youtool\AuthBundle\Jwt\Handler\HandlerInterface;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Security\JwtUserProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Exception;
+namespace Youtool\AuthBundle\Exception;
 
 use Exception;
 

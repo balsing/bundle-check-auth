@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\Parser;
+namespace Youtool\AuthBundle\Jwt\Parser;
 
 use Symfony\Component\HttpFoundation\Request;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
 
 /**
  * Интерфейс для объекта, который получает токен из объекта http запроса symfony.

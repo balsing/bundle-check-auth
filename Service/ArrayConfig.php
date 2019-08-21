@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Service;
+namespace Youtool\AuthBundle\Service;
 
 use InvalidArgumentException;
 

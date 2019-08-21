@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Security;
+namespace Youtool\AuthBundle\Security;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -11,9 +11,9 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use YouTool\AuthBundle\Jwt\Handler\HandlerInterface;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface as JwtTokenInterface;
+use Youtool\AuthBundle\Jwt\Handler\HandlerInterface;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface as JwtTokenInterface;
 
 /**
  * Guard для авторизации через токен сервиса авторизации youtool.

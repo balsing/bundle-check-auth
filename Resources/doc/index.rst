@@ -44,4 +44,4 @@
 
     * base_url - базовая ссылка на токен авторизации.
 
-Если необходимо добавить какой-либо дополнительный валидатор, то нужно объявить сервис тегом youtool_auth.token.validator, который будет реализовывать YouTool\AuthBundle\Jwt\Validator\ValidatorInterface.
+Если необходимо добавить какой-либо дополнительный валидатор, то нужно объявить сервис тегом youtool_auth.token.validator, который будет реализовывать Youtool\AuthBundle\Jwt\Validator\ValidatorInterface.

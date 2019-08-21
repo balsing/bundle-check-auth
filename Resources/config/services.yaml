@@ -1,17 +1,17 @@
 services:
 
     youtool_auth.crypt.public_key:
-        class: YouTool\AuthBundle\CryptKey\CryptKey
+        class: Youtool\AuthBundle\CryptKey\CryptKey
         arguments:
             $keyPath: '%youtool_auth.public_key_path%'
 
 
 
     youtool_auth.token.token_factory:
-        class:  YouTool\AuthBundle\Jwt\TokenFactory\TokenFactory
+        class:  Youtool\AuthBundle\Jwt\TokenFactory\TokenFactory
 
     youtool_auth.token.parser:
-        class: YouTool\AuthBundle\Jwt\Parser\BearerParser
+        class: Youtool\AuthBundle\Jwt\Parser\BearerParser
         arguments:
             - '@youtool_auth.token.token_factory'
 
@@ -21,7 +21,7 @@ services:
         class: GuzzleHttp\Client
 
     youtool_auth.service.config:
-        class: YouTool\AuthBundle\Service\ArrayConfig
+        class: Youtool\AuthBundle\Service\ArrayConfig
         arguments:
             $baseUri: '%youtool_auth.base_url%'
             $clientId: '%youtool_auth.client_id%'
@@ -29,61 +29,61 @@ services:
             $redirectUri: '%youtool_auth.redirect_url%'
             $authScopes: '%youtool_auth.auth_scopes%'
 
-    YouTool\AuthBundle\Service\ConfigInterface:
+    Youtool\AuthBundle\Service\ConfigInterface:
         alias: '@youtool_auth.service.config'
 
     youtool_auth.service.service:
-        class: YouTool\AuthBundle\Service\AuthService
+        class: Youtool\AuthBundle\Service\AuthService
         arguments:
             $config: '@youtool_auth.service.config'
             $transport: '@youtool_auth.service.transport'
             $tokenFactory: '@youtool_auth.token.token_factory'
 
-    YouTool\AuthBundle\Service\AuthServiceInterface:
+    Youtool\AuthBundle\Service\AuthServiceInterface:
         alias: youtool_auth.service.service
 
 
 
     youtool_auth.security.validator.expired:
-        class: YouTool\AuthBundle\Jwt\Validator\ExpiredValidator
+        class: Youtool\AuthBundle\Jwt\Validator\ExpiredValidator
         tags:
             - { name: 'youtool_auth.security.validator', priority: 1000 }
         arguments:
             $expiredTimeout: '%youtool_auth.expired_timeout%'
 
     youtool_auth.security.validator.required_scopes:
-        class: YouTool\AuthBundle\Jwt\Validator\RequiredScopesValidator
+        class: Youtool\AuthBundle\Jwt\Validator\RequiredScopesValidator
         tags:
             - { name: 'youtool_auth.security.validator', priority: 900 }
         arguments:
             $requiredScopes: '%youtool_auth.required_scopes%'
 
     youtool_auth.security.validator.verify:
-        class: YouTool\AuthBundle\Jwt\Validator\VerifyValidator
+        class: Youtool\AuthBundle\Jwt\Validator\VerifyValidator
         tags:
             - { name: 'youtool_auth.security.validator', priority: 800 }
         arguments:
             - '@youtool_auth.crypt.public_key'
 
     # youtool_auth.security.validator.auth_service:
-    #     class: YouTool\AuthBundle\Jwt\Validator\AuthServiceValidator
+    #     class: Youtool\AuthBundle\Jwt\Validator\AuthServiceValidator
     #     tags:
     #         - { name: 'youtool_auth.security.validator', priority: 700 }
     #     arguments:
     #         - '@youtool_auth.service.service'
 
     youtool_auth.security.handler:
-        class: YouTool\AuthBundle\Jwt\Handler\CompositeHandler
+        class: Youtool\AuthBundle\Jwt\Handler\CompositeHandler
         arguments:
             - '@youtool_auth.token.parser'
             - !tagged youtool_auth.security.validator
 
-    YouTool\AuthBundle\Jwt\Handler\HandlerInterface:
+    Youtool\AuthBundle\Jwt\Handler\HandlerInterface:
         alias: youtool_auth.security.handler
 
 
 
-    YouTool\AuthBundle\Security\JwtAuthenticator:
-        class: YouTool\AuthBundle\Security\JwtAuthenticator
+    Youtool\AuthBundle\Security\JwtAuthenticator:
+        class: Youtool\AuthBundle\Security\JwtAuthenticator
         arguments:
             - '@youtool_auth.security.handler'

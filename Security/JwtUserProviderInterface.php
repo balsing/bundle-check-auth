@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Security;
+namespace Youtool\AuthBundle\Security;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
 /**

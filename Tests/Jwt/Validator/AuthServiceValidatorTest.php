@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt\Validator;
+namespace Youtool\AuthBundle\Tests\Jwt\Validator;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Jwt\Validator\AuthServiceValidator;
-use YouTool\AuthBundle\Service\AuthServiceInterface;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Jwt\Validator\AuthServiceValidator;
+use Youtool\AuthBundle\Service\AuthServiceInterface;
 
 /**
  * Набор тестов для объекта, который проверяет валидность jwt с помощью запроса

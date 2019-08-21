@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\TokenFactory;
+namespace Youtool\AuthBundle\Jwt\TokenFactory;
 
-use YouTool\AuthBundle\Jwt\Token\Token;
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Jwt\Token\Token;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
 use Lcobucci\JWT\Parser;
 use Exception;
 

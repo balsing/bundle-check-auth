@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Service;
+namespace Youtool\AuthBundle\Service;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
 
 /**
  * Объект, который содержит успешный ответ от сервиса авторизации с токенами.

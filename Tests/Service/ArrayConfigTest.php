@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Service;
+namespace Youtool\AuthBundle\Tests\Service;
 
-use YouTool\AuthBundle\Tests\BaseCase;
-use YouTool\AuthBundle\Service\ArrayConfig;
+use Youtool\AuthBundle\Tests\BaseCase;
+use Youtool\AuthBundle\Service\ArrayConfig;
 use InvalidArgumentException;
 
 /**

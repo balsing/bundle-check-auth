@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Service;
+namespace Youtool\AuthBundle\Tests\Service;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Service\AuthService;
-use YouTool\AuthBundle\Service\ArrayConfig;
-use YouTool\AuthBundle\Service\TokenResponse;
-use YouTool\AuthBundle\Jwt\TokenFactory\TokenFactoryInterface;
-use YouTool\AuthBundle\Jwt\TokenFactory\TokenFactory;
-use YouTool\AuthBundle\Exception\TransportException;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Service\AuthService;
+use Youtool\AuthBundle\Service\ArrayConfig;
+use Youtool\AuthBundle\Service\TokenResponse;
+use Youtool\AuthBundle\Jwt\TokenFactory\TokenFactoryInterface;
+use Youtool\AuthBundle\Jwt\TokenFactory\TokenFactory;
+use Youtool\AuthBundle\Exception\TransportException;
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;

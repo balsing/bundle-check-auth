@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\Jwt\Handler;
+namespace Youtool\AuthBundle\Tests\Jwt\Handler;
 
-use YouTool\AuthBundle\Tests\JwtCase;
-use YouTool\AuthBundle\Jwt\Handler\CompositeHandler;
-use YouTool\AuthBundle\Jwt\Parser\ParserInterface;
-use YouTool\AuthBundle\Jwt\Validator\ValidatorInterface;
-use YouTool\AuthBundle\Exception\InvalidTokenException;
+use Youtool\AuthBundle\Tests\JwtCase;
+use Youtool\AuthBundle\Jwt\Handler\CompositeHandler;
+use Youtool\AuthBundle\Jwt\Parser\ParserInterface;
+use Youtool\AuthBundle\Jwt\Validator\ValidatorInterface;
+use Youtool\AuthBundle\Exception\InvalidTokenException;
 use Symfony\Component\HttpFoundation\Request;
 use UnexpectedValueException;
 

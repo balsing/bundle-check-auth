@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\Token;
+namespace Youtool\AuthBundle\Jwt\Token;
 
-use YouTool\AuthBundle\CryptKey\CryptKeyInterface;
+use Youtool\AuthBundle\CryptKey\CryptKeyInterface;
 
 /**
  * Интерфейс для объекта, в котором хранится jwt.

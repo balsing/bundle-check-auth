@@ -38,14 +38,14 @@
                 stateless: true
                 guard:
                     authenticators:
-                        - YouTool\AuthBundle\Security\JwtAuthenticator
+                        - Youtool\AuthBundle\Security\JwtAuthenticator
     ```
 
 4. Бандл не предоставляет [класса для получения пользователей `UserProviderInterface`](https://symfony.com/doc/current/security.html#b-the-user-provider). 
 Провайдер пользователей должен быть реализован для каждого проекта отдельно. В случае, если в `authenticator` будет передан 
 стандартный провайдер пользователей `UserProviderInterface`, то в метод провайдера `loadUserByUsername` будет передан `sub` 
 параметр (идентификатор пользователя на сервисе авторизации), полученный из jwt. Если требуется передать в провайдер пользователей 
-весь объект jwt, то провайдер должен реализовывать интерфейс `YouTool\AuthBundle\Security\JwtUserProviderInterface`.
+весь объект jwt, то провайдер должен реализовывать интерфейс `Youtool\AuthBundle\Security\JwtUserProviderInterface`.
 
 
 
@@ -86,14 +86,15 @@
 * `auth_scopes` - массив разрешений, которые нужно запросить при авторизации пользовтеля.
 
 Если требуется добавить дополнительную проверку токена, то следует объявить сервис c тегом `youtool_auth.token.validator`, 
-который будет реализовывать `YouTool\AuthBundle\Jwt\Validator\ValidatorInterface`.
+который будет реализовывать `Youtool\AuthBundle\Jwt\Validator\ValidatorInterface`.
 
 
 
 Использование в локальном окружении.
 ------------------------------------
 
-Для локальной разработки или для запуска тестов также доступен упрощенный алгоритм авторизации, без обращения к сервису авторизации. Для этого нужно настроить заглушку для сервиса авторизации:
+Для локальной разработки или для запуска тестов также доступен упрощенный алгоритм авторизации, без обращения к сервису авторизации. 
+Для этого нужно настроить заглушку для сервиса авторизации:
 
 ```yaml
 # app/config/packages/dev/youtool_auth.yaml для локальной разработки
@@ -105,8 +106,8 @@
 services:
     # для тестового окружения используем тестовый сервис,
     # чтобы не обращаться каждый раз к сервису авторизации
-     youtool_auth.service.service:
-        class: YouTool\AuthBundle\Service\TestService
+     you_tool_auth.service.service:
+        class: Youtool\AuthBundle\Service\TestService
         arguments:
             $config: '@youtool_auth.service.config'
             $sub: d069366c-a669-4379-b9b5-0f0f18d6b0c5

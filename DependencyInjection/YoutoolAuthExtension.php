@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\DependencyInjection;
+namespace Youtool\AuthBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -12,7 +12,7 @@ use Symfony\Component\Config\FileLocator;
 /**
  * Класс расширения для предоставления бандлом сервисов.
  */
-class YouToolAuthExtension extends Extension
+class YoutoolAuthExtension extends Extension
 {
     /**
      * @inheritdoc

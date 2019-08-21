@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Controller;
+namespace Youtool\AuthBundle\Controller;
 
-use YouTool\AuthBundle\Service\AuthServiceInterface;
-use YouTool\AuthBundle\Form\AuthorizeCodeType;
-use YouTool\AuthBundle\Form\RefreshType;
+use Youtool\AuthBundle\Service\AuthServiceInterface;
+use Youtool\AuthBundle\Form\AuthorizeCodeType;
+use Youtool\AuthBundle\Form\RefreshType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;

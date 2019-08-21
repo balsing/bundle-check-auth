@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\TokenFactory;
+namespace Youtool\AuthBundle\Jwt\TokenFactory;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
 
 /**
  * Интерфейс для объекта, который создает jwt.

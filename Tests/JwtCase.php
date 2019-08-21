@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests;
+namespace Youtool\AuthBundle\Tests;
 
-use YouTool\AuthBundle\Jwt\Token\TokenInterface;
-use YouTool\AuthBundle\Jwt\Token\Token as YouToolToken;
+use Youtool\AuthBundle\Jwt\Token\TokenInterface;
+use Youtool\AuthBundle\Jwt\Token\Token as YoutoolToken;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 
@@ -32,7 +32,7 @@ abstract class JwtCase extends BaseCase
             ->set('scopes', $scopes)
             ->getToken();
 
-        return new YouToolToken($externalToken);
+        return new YoutoolToken($externalToken);
     }
 
     /**
@@ -43,6 +43,6 @@ abstract class JwtCase extends BaseCase
         $pathToFile = $pathToFile ?: __DIR__ . '/_fixture/token.txt';
         $externalToken = (new Parser)->parse(file_get_contents($pathToFile));
 
-        return new YouToolToken($externalToken);
+        return new YoutoolToken($externalToken);
     }
 }

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Tests\CryptKey;
+namespace Youtool\AuthBundle\Tests\CryptKey;
 
-use YouTool\AuthBundle\Tests\BaseCase;
-use YouTool\AuthBundle\CryptKey\CryptKey;
+use Youtool\AuthBundle\Tests\BaseCase;
+use Youtool\AuthBundle\CryptKey\CryptKey;
 use InvalidArgumentException;
 
 /**

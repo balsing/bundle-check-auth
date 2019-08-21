@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace YouTool\AuthBundle\Jwt\Handler;
+namespace Youtool\AuthBundle\Jwt\Handler;
 
-use YouTool\AuthBundle\Jwt\Parser\ParserInterface;
-use YouTool\AuthBundle\Jwt\Validator\ValidatorInterface;
+use Youtool\AuthBundle\Jwt\Parser\ParserInterface;
+use Youtool\AuthBundle\Jwt\Validator\ValidatorInterface;
 
 /**
  * Интерфейс для объекта обработчика токена: сочетает в себе функционал

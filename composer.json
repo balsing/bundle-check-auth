@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "YouTool\\AuthBundle\\": ""
+            "Youtool\\AuthBundle\\": ""
         },
         "exclude-from-classmap": [
             "/Tests/"

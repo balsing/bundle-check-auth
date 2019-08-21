@@ -2,7 +2,7 @@
 
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="YouToolAuthBundle for youtool project">
+        <testsuite name="YoutoolAuthBundle for youtool project">
             <directory>./Tests</directory>
         </testsuite>
     </testsuites>

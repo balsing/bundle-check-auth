@@ -12,7 +12,7 @@ cache:
 
 
 variables:
-  TEST_IMAGE: git.crtweb.ru:4567/ youtool/bundle-check-auth/tests:latest
+  TEST_IMAGE: git.crtweb.ru:4567/youtool/bundle-check-auth/tests:latest
   CI_REGISTRY: git.crtweb.ru:4567
 
 

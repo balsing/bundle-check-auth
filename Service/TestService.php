@@ -134,10 +134,10 @@ class TestService implements AuthServiceInterface
      */
     public function createFakeToken(string $sub = null): TokenInterface
     {
-        if ($sub && preg_match('/^([^\-]+)\-.+$/', $sub, $matches)) {
-            $email = "{$matches[1]}@test.test";
+        if ($sub && preg_match('/^+99999999999$/', $sub, $matches)) {
+            $phone = "{$matches[1]}";
         } else {
-            $email = 'test@test.test';
+            $phone = '+77777777777';
         }
 
         $time = time();
@@ -149,7 +149,7 @@ class TestService implements AuthServiceInterface
             ->setExpiration($time + 60 * 60)
             ->setSubject((string) $sub)
             ->set('scopes', $this->config->getAuthScopes())
-            ->set('email', $email)
+            ->set('phone', $phone)
             ->sign(new Sha256, new Key($this->getPathToPrivateKey()))
             ->getToken();
 

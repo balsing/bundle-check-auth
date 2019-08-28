@@ -2,8 +2,8 @@ version: '2'
 
 services:
 
-    php:
-        container_name:  youtool-auth-bundle-php
+    youtool-check-auth-bundle-php:
+        container_name:  youtool-check-auth-bundle-php
         tty: true
         restart: 'no'
         build:

@@ -1,9 +1,9 @@
-FROM php:7.2-cli-alpine
+FROM php:7.3-cli-alpine
 
 RUN set -xe && apk update && apk upgrade
 
 RUN apk add --no-cache \
-    libzip \
+    libzip-dev \
     libintl \
     icu \
     icu-dev \

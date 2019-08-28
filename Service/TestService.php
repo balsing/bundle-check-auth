@@ -134,8 +134,8 @@ class TestService implements AuthServiceInterface
      */
     public function createFakeToken(string $sub = null): TokenInterface
     {
-        if ($sub && preg_match('/^+99999999999$/', $sub, $matches)) {
-            $phone = "{$matches[1]}";
+        if ($sub && preg_match('/\+\d{11}/', $sub, $matches)) {
+            $phone = "{$matches[0]}";
         } else {
             $phone = '+77777777777';
         }

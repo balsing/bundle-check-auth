@@ -55,10 +55,11 @@ class TestService implements AuthServiceInterface
      */
     protected $refreshToken;
 
-    public function __construct(ConfigInterface $config, string $sub, array $allowedSubs = [])
+    public function __construct(ConfigInterface $config, string $sub, string $phone, array $allowedSubs = [])
     {
         $this->config = $config;
         $this->sub = $sub;
+        $this->phone = $phone;
         $this->allowedSubs = array_unique(array_merge(array_map('trim', $allowedSubs), [$sub]));
         $this->authCode = 'test_auth_code';
         $this->refreshToken = 'test_refresh_token';

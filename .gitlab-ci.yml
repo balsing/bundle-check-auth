@@ -33,7 +33,7 @@ tests:
   stage: tests
   image: $TEST_IMAGE
   before_script:
-    - composer update --no-interaction --no-ansi
+    - composer install --no-interaction --no-ansi
   script:
     - vendor/bin/php-cs-fixer fix --config=.php_cs.dist -v --dry-run --stop-on-violation --using-cache=no
     - vendor/bin/phpcpd ./ --exclude vendor --exclude Tests -v

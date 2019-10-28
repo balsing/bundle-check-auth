@@ -24,11 +24,18 @@ class TestService implements AuthServiceInterface
      */
     protected $config;
     /**
-     * Пользователь, от имени которого пройдет авторизация.
+     * Uuid пользователя, от имени которого пройдет авторизация.
      *
      * @var string
      */
     protected $sub;
+
+    /**
+     * Телефон пользователя от имени которого пройдет авторизация.
+     *
+     * @var string
+     */
+    protected $phone;
     /**
      * Пользователи, для которых пройдет валидация.
      *
@@ -80,7 +87,7 @@ class TestService implements AuthServiceInterface
         }
 
         return new TokenResponse(
-            $this->createFakeToken($this->sub),
+            $this->createFakeToken($this->sub, $this->phone),
             $this->refreshToken
         );
     }
@@ -95,7 +102,7 @@ class TestService implements AuthServiceInterface
         }
 
         return new TokenResponse(
-            $this->createFakeToken($this->sub),
+            $this->createFakeToken($this->sub, $this->phone),
             $this->refreshToken
         );
     }
@@ -110,7 +117,7 @@ class TestService implements AuthServiceInterface
         }
 
         return new TokenResponse(
-            $this->createFakeToken($this->sub),
+            $this->createFakeToken($this->sub, $this->phone),
             $this->refreshToken
         );
     }
@@ -132,14 +139,8 @@ class TestService implements AuthServiceInterface
     /**
      * Создает фэйковый токен.
      */
-    public function createFakeToken(string $sub = null): TokenInterface
+    public function createFakeToken(string $sub, string $phone): TokenInterface
     {
-        if ($sub && preg_match('/\+\d{11}/', $sub, $matches)) {
-            $phone = "{$matches[0]}";
-        } else {
-            $phone = '+77777777777';
-        }
-
         $time = time();
         $token = (new Builder())
             ->setAudience($this->config->getClientId())
@@ -147,7 +148,7 @@ class TestService implements AuthServiceInterface
             ->setIssuedAt($time)
             ->setNotBefore($time)
             ->setExpiration($time + 60 * 60)
-            ->setSubject((string) $sub)
+            ->setSubject($sub)
             ->set('scopes', $this->config->getAuthScopes())
             ->set('phone', $phone)
             ->sign(new Sha256, new Key($this->getPathToPrivateKey()))

@@ -1,5 +1,5 @@
 {
-    "name": "youtool/bundle-check-auth",
+    "name": "balsing/bundle-check-auth",
     "type": "symfony-bundle",
     "description": "Bundle for youtool's auth service",
     "keywords": [],
